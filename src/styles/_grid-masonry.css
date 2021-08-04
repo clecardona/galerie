@@ -1,0 +1,42 @@
+.masonry{
+    padding :10px;
+
+
+}
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -10px; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 10px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+
+  
+/* Cards */
+
+.my-masonry-grid_column > .card {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows:  1fr 2em;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+  box-shadow: 2px 2px 6px #55555542;
+}
+
+.masonry .card img {
+    border-radius: 10px 10px 0 0;
+  width: 100%;
+}
+
+.masonry .card .card-footer {
+  color: #8b8b8b;
+  text-align: center;
+}

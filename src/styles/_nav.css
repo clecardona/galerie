@@ -1,0 +1,41 @@
+nav{
+display: flex;
+   justify-content: center;
+   align-items: center;
+}
+nav button{
+
+    background: transparent;
+    height: 50%;
+    margin: 0 1em;
+    border:none;
+    border-bottom: 1px solid transparent;
+   
+    cursor: pointer;
+
+}
+nav button:hover{
+    border:none;
+    border-bottom: 1px solid black;
+    /* transition: ease .3s; */
+}
+nav button:active,
+nav button .is-active{
+    border:none;
+    border-bottom: 2px solid black;
+}
+
+
+@media only screen and (min-width: 600px) {
+    nav{
+       flex-direction: column;
+       justify-content: flex-start;
+        }  
+
+        nav button{
+            height: auto;
+            width: fit-content;
+            margin:  1em 0;
+           
+        }
+}

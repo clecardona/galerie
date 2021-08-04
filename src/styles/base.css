@@ -1,0 +1,21 @@
+/* variables imports*/
+@import '_variables.css';
+
+
+/* files imports*/
+@import '_grid.css';
+@import '_grid-masonry.css';
+@import '_grid-polaroid.css';
+@import '_grid-tiles.css';
+@import '_grid-comic.css';
+@import '_colors.css';
+@import '_card.css';
+@import '_nav.css';
+
+/* fonts imports*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"); 
+
+
+/* animations imports*/
+/* @import "./_animations.css"; */

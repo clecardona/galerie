@@ -1,0 +1,20 @@
+main{
+/*   background: chartreuse;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; */
+}
+
+nav{
+    background: #fafafa;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header img  {
+    
+    height: 90%;
+}
