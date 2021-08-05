@@ -40,3 +40,14 @@
   color: #8b8b8b;
   text-align: center;
 }
+
+.masonry .card:hover {
+  cursor: pointer;
+transform: scale(1.05);
+transition: ease .5s;
+
+}
+.masonry .card:hover  .card-footer {
+ color: red;
+
+}

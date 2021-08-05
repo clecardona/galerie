@@ -1,0 +1,77 @@
+.tiles {
+  padding: 0 0.2em;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+
+  gap: 0.2rem;
+}
+@media only screen and (min-width: 600px) {
+  .tiles {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .tiles .card:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .tiles .card:nth-child(2n) {
+    grid-column: span 2;
+  }
+
+  .tiles .card:nth-child(4n + 1) {
+    grid-row: span 2;
+  }
+
+  .tiles .card:nth-child(4n) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .tiles .card:last-child {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+
+.tiles .card {
+  width: 100%;
+  height: 100%;
+  background: teal;
+  display: block;
+
+  overflow: hidden;
+}
+
+.tiles .card img {
+  /* display: none; */
+  filter: grayscale(90%);
+  cursor: pointer;
+ /*  height: minmax(200px,100%); */
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+.tiles .card .card-footer {
+  z-index: 2;
+  position: relative;
+
+  bottom: 25px;
+  left: 5px;
+
+  font-size: x-small;
+  background-color: rgba(255, 255, 255, 0.452);
+  width: fit-content;
+
+  padding: 0 3px;
+}
+
+.tiles .card img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+
+  transition: ease 0.6s;
+}
