@@ -1,0 +1,54 @@
+.comic {
+  padding: 0 0.2em;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: dense;
+  gap: 0.2rem;
+}
+@media only screen and (min-width: 600px) {
+  .comic {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .comic .card:nth-child(2n) {
+    grid-column: span 2;
+  }
+  .comic .card:nth-child(3n-1) {
+    grid-column: span 3;
+  }
+}
+
+.comic .card {
+  width: 100%;
+  height: 200px;
+  background: teal;
+
+ /*  display: grid;
+  grid-template-rows: 200px 0px; */
+  display: block;
+
+  overflow: hidden;
+}
+
+.comic .card img {
+  /* display: none; */
+
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.comic .card .card-footer {
+  z-index: 2;
+  position: relative;
+
+  bottom: 25px;
+  left: 5px;
+
+  font-size:x-small;
+  background-color: rgba(255, 255, 255, 0.452);
+  width: fit-content;
+
+  padding: 0 3px;
+}
+

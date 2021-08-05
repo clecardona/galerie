@@ -3,6 +3,9 @@ import "./styles/base.css";
 import logo from "./assets/logo.png"
 import GalleryMasonry from "./components/GalleryMasonry";
 import GalleryPolaroid from "./components/GalleryPolaroid";
+import Footer from "./components/Footer";
+import GalleryTiles from "./components/GalleryTiles";
+import GalleryComic from "./components/GalleryComic";
 
 export default function App() {
 
@@ -45,10 +48,11 @@ function selectComic(){
         <main>
          { gallerySelected === "masonry" && <GalleryMasonry images={images}/> }
          { gallerySelected === "polaroid" && <GalleryPolaroid images={images}/>}
-
+         { gallerySelected === "tiles" && <GalleryTiles images={images}/>}
+         { gallerySelected === "comic" && <GalleryComic images={images}/>}
         </main>
 
-        <footer>footer</footer>
+        <Footer/>
       </div>
     </div>
   );
