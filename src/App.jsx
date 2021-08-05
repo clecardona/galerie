@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import GalleryTiles from "./components/GalleryTiles";
 import GalleryComic from "./components/GalleryComic";
 
+
 export default function App() {
 
   const [gallerySelected,setGallerySelected] = useState("masonry") 
@@ -37,19 +38,22 @@ function selectComic(){
         
         
         <nav>
-<button onClick={selectMasonry}> Masonry</button>
-<button onClick={selectPolaroid}> Polaroid</button>
-<button onClick={selectTiles}> Tiles</button>
-<button onClick={selectComic}>Comic</button>
+<button className={(gallerySelected ==="masonry") ? "btn-active" : ""} onClick={selectMasonry}> Masonry</button>
+<button className={(gallerySelected ==="polaroid") ? "btn-active" : ""} onClick={selectPolaroid}> Polaroid</button>
+<button className={(gallerySelected ==="tiles") ? "btn-active" : ""} onClick={selectTiles}> Tiles</button>
+<button className={(gallerySelected ==="comic") ? "btn-active" : ""} onClick={selectComic}>Comic</button>
 
         </nav>
       
 
         <main>
+
          { gallerySelected === "masonry" && <GalleryMasonry images={images}/> }
          { gallerySelected === "polaroid" && <GalleryPolaroid images={images}/>}
          { gallerySelected === "tiles" && <GalleryTiles images={images}/>}
          { gallerySelected === "comic" && <GalleryComic images={images}/>}
+         
+
         </main>
 
         <Footer/>

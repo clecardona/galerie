@@ -14,16 +14,22 @@ nav button{
     cursor: pointer;
 
 }
+
 nav button:hover{
     border:none;
     border-bottom: 1px solid black;
     /* transition: ease .3s; */
 }
-nav button:active,
-nav button .is-active{
-    border:none;
-    border-bottom: 2px solid black;
+
+ .btn-active{
+    color: red;
+    border-bottom: 1px solid red;
 }
+.btn-active:hover{
+    color: red;
+    border-bottom: 1px solid red;
+}
+
 
 
 @media only screen and (min-width: 600px) {

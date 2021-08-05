@@ -1,5 +1,6 @@
 import Card from "./Card";
 import Masonry from "react-masonry-css";
+import { CSSTransitionGroup } from "react-transition-group";
 
 export default function GalleryMasonry({ images}) {
 
@@ -11,7 +12,13 @@ export default function GalleryMasonry({ images}) {
   };
 
   return (
-   
+    <CSSTransitionGroup
+    transitionName="fade"
+    transitionEnterTimeout={500}
+    transitionLeaveTimeout={500}
+    transitionAppear={true}
+    transitionAppearTimeout={500}
+  >
     <div className="masonry">
     <Masonry
       breakpointCols={breakpointColumnsObj}
@@ -25,6 +32,7 @@ export default function GalleryMasonry({ images}) {
       
     </Masonry>
     </div>
+    </CSSTransitionGroup>
     
   );
 }
